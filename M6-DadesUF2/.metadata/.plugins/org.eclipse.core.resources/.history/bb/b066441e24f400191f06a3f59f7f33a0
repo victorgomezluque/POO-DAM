@@ -1,0 +1,11 @@
+import java.sql.Date;
+
+public class User {
+	String UserName;
+	String password;
+	String alias;
+	Date dataRegistre;
+	String pathAvatar;
+	Double percentatgeVict;
+	
+}

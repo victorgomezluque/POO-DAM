@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="PasoaPaso2/src/main/java"/>
+	<classpathentry kind="src" path="Relacions/src/main/java"/>
+	<classpathentry kind="src" path="Webservice2/src/main/java"/>
+	<classpathentry kind="lib" path="Webservice2/.mvn/wrapper/maven-wrapper.jar"/>
+	<classpathentry kind="lib" path="Webservice2/gradle/wrapper/gradle-wrapper.jar"/>
+	<classpathentry kind="lib" path="C:/Users/IES SABADELL/.m2/repository/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final.jar" sourcepath="C:/Users/IES SABADELL/.m2/repository/org/hibernate/hibernate-core/5.3.7.Final/hibernate-core-5.3.7.Final-sources.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.hibernate"/>
+			<attribute name="maven.artifactId" value="hibernate-core"/>
+			<attribute name="maven.version" value="5.3.7.Final"/>
+			<attribute name="maven.scope" value="compile"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="Webservice2/target/classes"/>
+</classpath>

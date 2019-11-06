@@ -1,0 +1,11 @@
+<alumne>
+		<nom>Joan</nom>
+		<cognoms>Perez Rubarte</cognoms>
+		<DNI>48923793D</DNI>
+		<adreca>Carrer de les Flors, 4, Sabadell</adreca>
+		<telefons>
+			<telefon>665340559</telefon>
+			<telefon>832743829</telefon>
+		</telefons>
+		<mail>joanperez@gmail.com</mail>
+</alumne>

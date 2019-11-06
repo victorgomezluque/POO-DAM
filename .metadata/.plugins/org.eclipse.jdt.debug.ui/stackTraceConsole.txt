@@ -1,0 +1,5 @@
+ArrayList<L> esque = new ArrayList<L>();
+		for (L l : esque) {
+			esque.add(l);
+		}
+		return (Set<L>) esque;

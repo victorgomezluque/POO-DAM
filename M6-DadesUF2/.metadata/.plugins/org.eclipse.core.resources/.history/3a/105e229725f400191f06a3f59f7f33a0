@@ -1,0 +1,19 @@
+
+import javax.imageio.spi.ServiceRegistry;
+
+import com.mysql.cj.Session;
+import com.mysql.cj.xdevapi.SessionFactory;;
+
+public class main {
+	
+	static User user;
+	static Session session;
+	static SessionFactory sessionFactory;
+	static ServiceRegistry serviceRegistry;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

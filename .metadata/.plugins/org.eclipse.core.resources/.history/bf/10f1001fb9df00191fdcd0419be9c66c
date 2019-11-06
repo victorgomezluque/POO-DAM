@@ -1,0 +1,30 @@
+package problemes.figures.solucio;
+
+import java.awt.Color;
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collector;
+
+import problemes.figures.problema.Llenc;
+import problemes.figures.problema.TeColor;
+
+public abstract class FiguraColorImp extends FiguraImpl implements TeColor  {
+	
+	private TeColor color;
+
+	public TeColor getColor() {
+		return color;
+	}
+
+	public void setColor(TeColor color) {
+		this.color = color;
+	}
+
+	
+	
+
+
+}

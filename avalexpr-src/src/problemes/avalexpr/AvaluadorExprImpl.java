@@ -1,0 +1,124 @@
+package problemes.avalexpr;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.StringTokenizer;
+
+public class AvaluadorExprImpl implements AvaluadorExpr {
+
+	@Override
+	public List<String> aTokens(String expr) {
+		String[] tokens = expr.split(" ");
+
+		// Arrays.asList() convierte un array en un array list,
+		ArrayList<String> res = new ArrayList<String>(Arrays.asList(tokens));
+
+		for (Iterator iterator = res.iterator(); iterator.hasNext();) {
+			String string = (String) iterator.next();
+			if (string.equals(" ")) {
+				iterator.remove();
+			}
+
+		}
+
+		return res;
+	}
+
+	@Override
+	public List<String> aPostfix(List<String> exprInfix) {
+		ArrayList<String> numeros = new ArrayList<String>();
+		ArrayList<String> operador = new ArrayList<String>();
+		int contador = 0;
+
+		for (String string : exprInfix) {
+
+			try {
+				Double.parseDouble(string);
+				numeros.add(string);
+
+			} catch (Exception e) {
+
+					operador.add(0, string);
+
+				
+
+			}
+
+		}
+		
+		
+
+		ArrayList<String> res = new ArrayList<String>();
+		res.addAll(numeros);
+		res.addAll(operador);
+		return res;
+	}
+
+	@Override
+	public double avalua(List<String> exprPostfix) {
+		double resultado = 1;
+
+		while (exprPostfix.size() > 1) {
+			System.out.println(exprPostfix);
+			for (int i = 0; i < exprPostfix.size(); i++) {
+
+				try {
+					Double.parseDouble(exprPostfix.get(i));
+				} catch (Exception e) {
+					if (exprPostfix.get(i).equals("*")) {
+						Double num1 = Double.parseDouble(exprPostfix.get((int) (i - 1)));
+						Double num2 = Double.parseDouble(exprPostfix.get((int) (i - 2)));
+
+						Double result = num1 * num2;
+						resultado = result;
+//							
+						exprPostfix.remove(i);
+						exprPostfix.remove(i - 1);
+						exprPostfix.set((int) (i - 2), result.toString());
+
+					} else if (exprPostfix.get(i).equals("+")) {
+						Double num1 = Double.parseDouble(exprPostfix.get((int) (i - 1)));
+						Double num2 = Double.parseDouble(exprPostfix.get((int) (i - 2)));
+
+						Double result = num1 + num2;
+						resultado = result;
+
+						exprPostfix.remove(i);
+						exprPostfix.remove(i - 1);
+						exprPostfix.set((int) (i - 2), result.toString());
+
+					} else if (exprPostfix.get(i).equals("-")) {
+						Double num1 = Double.parseDouble(exprPostfix.get((int) (i - 1)));
+						Double num2 = Double.parseDouble(exprPostfix.get((int) (i - 2)));
+
+						Double result = num2 - num1;
+						resultado = result;
+
+						exprPostfix.remove(i);
+						exprPostfix.remove(i - 1);
+						exprPostfix.set((int) (i - 2), result.toString());
+
+					} else if (exprPostfix.get(i).equals("/")) {
+						Double num1 = Double.parseDouble(exprPostfix.get((int) (i - 1)));
+						Double num2 = Double.parseDouble(exprPostfix.get((int) (i - 2)));
+
+						Double result = num2 / num1;
+						resultado = result;
+
+						exprPostfix.remove(i);
+						exprPostfix.remove(i - 1);
+						exprPostfix.set((int) (i - 2), result.toString());
+
+					}
+
+				}
+
+			}
+		}
+
+		return resultado;
+	}
+
+}

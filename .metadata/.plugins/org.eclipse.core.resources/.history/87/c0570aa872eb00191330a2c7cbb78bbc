@@ -1,0 +1,33 @@
+package problemes.avalexpr;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class AvaluadorExprImpl implements AvaluadorExpr {
+	
+	@Override
+	public List<String> aTokens(String expr) {
+		ArrayList<String> numeros  = new ArrayList<String>();
+		ArrayList<String> operador  = new ArrayList<String>();
+		String[] expressiones = expr.split(" ");
+		
+		for (String string : expressiones) {
+			System.out.println(string);
+		
+		}
+		return null;
+		
+	}
+	
+	
+	@Override
+	public List<String> aPostfix(List<String> exprInfix) {
+		
+	}
+
+	@Override
+	public double avalua(List<String> exprPostfix) {
+		
+	}
+
+}

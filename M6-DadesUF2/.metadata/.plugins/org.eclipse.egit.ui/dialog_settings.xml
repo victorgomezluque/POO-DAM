@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://gitlab.com/malbareda/m06-acces-a-dades/tree/master"/>
+		<item value="https://gitlab.com/malbareda/m06-acces-a-dades/tree/master/UF2-Entity%20Framework/EFTest1-master"/>
+		<item value="https://gitlab.com/malbareda/m06-acces-a-dades/tree/master/UF2-Entity%20Framework"/>
+	</list>
+	<section name="GitImportWizard">
+	</section>
+</section>

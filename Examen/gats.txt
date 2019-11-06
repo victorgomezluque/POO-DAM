@@ -1,0 +1,20 @@
+Kernel
+mescla
+8
+El meu sopar
+true
+Giuseppe
+Angora Turc
+15
+Pernil
+true
+Fletxa
+Siames
+2
+L'aigua de l'aixeta
+false
+Fuzzy
+mescla
+5
+El meu nas, mentre dormo
+false

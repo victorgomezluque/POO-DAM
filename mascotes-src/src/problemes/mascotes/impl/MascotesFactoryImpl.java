@@ -1,0 +1,77 @@
+package problemes.mascotes.impl;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader.Array;
+
+import problemes.mascotes.Chip;
+import problemes.mascotes.ChipImpl;
+import problemes.mascotes.Especie;
+import problemes.mascotes.Hogar;
+import problemes.mascotes.Mascota;
+import problemes.mascotes.MascotaImpl;
+import problemes.mascotes.MascotesFactory;
+import problemes.mascotes.Veterinari;
+import problemes.mascotes.VeterinariImpl;
+import problemes.mascotes.hogarImpl;
+
+public class MascotesFactoryImpl implements MascotesFactory {
+	long contador =1;
+	private ArrayList<MascotaImpl> mascotes = new ArrayList<MascotaImpl>();
+	private ArrayList<Mascota> llista = new ArrayList<Mascota>();
+
+	@Override
+	public Hogar creaHogar(String nom) {
+		hogarImpl hogar = new hogarImpl(nom);
+		return hogar;
+	}
+
+	@Override
+	public Veterinari creaVeterinari(String nom) {
+		VeterinariImpl veterinari = new VeterinariImpl(nom);
+		return veterinari;
+	}
+
+	@Override
+	public Mascota registraGos(String nom, int any, Hogar hogar) {
+		Chip chip = new ChipImpl(contador,hogar);
+		MascotaImpl gos = new MascotaImpl(chip,nom,any,hogar,Especie.GOS);
+		mascotes.add(gos);
+		return gos;
+	}
+
+	@Override
+	public Mascota registraGat(String nom, int any, Hogar hogar) {
+		ChipImpl chip = new ChipImpl(contador,hogar);
+		Mascota gat = new MascotaImpl(chip,nom,any,hogar,Especie.GAT);
+		mascotes.add((MascotaImpl) gat);
+		contador ++;
+		return gat;
+	}
+
+	@Override
+	public Mascota trobaMascota(Long chipId) {
+		for (MascotaImpl mascotaImpl : mascotes) {
+			System.out.println(mascotaImpl.getChip().getId());
+			if(mascotaImpl.getChip().getId() == chipId) {
+				return mascotaImpl;
+			}
+		}
+		
+		return null;
+	}
+
+	@Override
+	public ArrayList<Mascota> llistaMascotes(Hogar hogar) {
+		for (MascotaImpl mascotaImpl : mascotes) {
+			if(mascotaImpl.getChip().getHogar().getNom() == hogar.getNom()) {
+				llista.add(mascotaImpl);
+			}
+		}
+		
+		return llista;
+	}
+
+}

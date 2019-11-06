@@ -1,0 +1,11 @@
+package problemes.figures.solucio;
+
+import java.awt.Rectangle;
+
+public class Quadrat extends Rectangle {
+	public Quadrat(double amplada) {
+
+	super(amplada,amplada);
+
+	}
+}

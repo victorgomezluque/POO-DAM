@@ -1,0 +1,22 @@
+package problemes.avalexpr;
+
+import java.util.List;
+
+public class AvaluadorExprImpl implements AvaluadorExpr {
+	
+	@Override
+	public List<String> aTokens(String expr) {
+		throw new RuntimeException("no implementat!");	
+	}
+	
+	@Override
+	public List<String> aPostfix(List<String> exprInfix) {
+		throw new RuntimeException("no implementat!");	
+	}
+
+	@Override
+	public double avalua(List<String> exprPostfix) {
+		throw new RuntimeException("no implementat!");
+	}
+
+}

@@ -1,0 +1,29 @@
+package problemes.avalexpr;
+
+import java.util.List;
+
+public interface AvaluadorExpr {
+	
+	/**
+	 * converteix una cadena a una llista de tokens
+	 * @param expr
+	 * @return
+	 */
+	List<String> aTokens(String expr);
+
+	/**
+	 * converteix una expressio infix a postfix
+	 * 
+	 * @param expr
+	 * @return
+	 */
+	List<String> aPostfix(List<String> infix);
+
+	/**
+	 * avalua una expressio postfix
+	 * 
+	 * @param infix
+	 * @return
+	 */
+	double avalua(List<String> postfix);
+}

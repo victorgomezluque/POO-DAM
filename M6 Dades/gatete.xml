@@ -1,0 +1,53 @@
+﻿<?xml version = "1.0"?>
+<Protectoras>
+        <nombre>HOLA</nombre>
+        <direccion>C/SANT HOLaW</direccion>
+        <gatetes>
+                <gato>
+                    <nom>Kernel</nom>
+                    <edat>2</edat>
+                    <longitud>0.53</longitud>
+                    <sexo>m</sexo>
+                    <vacunas>
+                        <vacuna>
+                            <nom>Tétanos</nom>
+                            <fecha>18-09-2019</fecha>
+                            <validez>10</validez>
+                        </vacuna>
+                        <vacuna>
+                            <nom>Triple Vírica</nom>
+                            <fecha>18-09-2019</fecha>
+                            <validez>100</validez>
+                        </vacuna>
+                        <vacuna>
+                            <nom>Hepatitis *</nom>
+                            <fecha>18-05-2019</fecha>
+                            <validez>5</validez>
+                        </vacuna>
+                </vacunas>
+            </gato>
+			 <gato>
+                    <nom>Kernel4</nom>
+                    <edat>22</edat>
+                    <longitud>0.51</longitud>
+                    <sexo>m</sexo>
+                    <vacunas>
+                        <vacuna>
+                            <nom>Tétanos</nom>
+                            <fecha>18-09-2019</fecha>
+                            <validez>10</validez>
+                        </vacuna>
+                        <vacuna>
+                            <nom>Triple Vírica</nom>
+                            <fecha>18-09-2019</fecha>
+                            <validez>100</validez>
+                        </vacuna>
+                        <vacuna>
+                            <nom>Hepatitis *</nom>
+                            <fecha>18-05-2019</fecha>
+                            <validez>5</validez>
+                        </vacuna>
+                </vacunas>
+            </gato>
+        </gatetes>     
+</Protectoras>

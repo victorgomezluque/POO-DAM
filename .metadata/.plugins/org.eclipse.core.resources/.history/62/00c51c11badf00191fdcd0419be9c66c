@@ -1,0 +1,5 @@
+package problemes.figures.solucio;
+
+public class Quadrat extends Rectangle{
+
+}

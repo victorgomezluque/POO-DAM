@@ -1,0 +1,5 @@
+Kernel
+mescla
+8
+El meu sopar
+true

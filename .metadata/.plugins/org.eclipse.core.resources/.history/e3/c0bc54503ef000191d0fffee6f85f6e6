@@ -1,0 +1,82 @@
+package problemes.avalexpr;
+
+import java.util.List;
+
+/*
+    SORTIDA ESPERADA: 
+	expression: 2 + 3 * 8
+	2: [2] <====> []
+	+: [2] <====> [+]
+	3: [2, 3] <====> [+]
+	*: [2, 3] <====> [*, +]
+	8: [2, 3, 8] <====> [*, +]
+	[2, 3, 8, *, +]
+	resultat: 26.0
+	
+	expression: ( 2 + 3 ) * 8
+	(: [] <====> [(]
+	2: [2] <====> [(]
+	+: [2] <====> [+, (]
+	3: [2, 3] <====> [+, (]
+	): [2, 3, +] <====> []
+	*: [2, 3, +] <====> [*]
+	8: [2, 3, +, 8] <====> [*]
+	[2, 3, +, 8, *]
+	resultat: 40.0
+
+	expressió: (7-6.5)*2.5
+	(: [] <====> [(]
+	7: [7] <====> [(]
+	-: [7] <====> [-, (]
+	6.5: [7, 6.5] <====> [-, (]
+	): [7, 6.5, -] <====> []
+	*: [7, 6.5, -] <====> [*]
+	2.5: [7, 6.5, -, 2.5] <====> [*]
+	[7, 6.5, -, 2.5, *]
+	1.25
+
+  ALGORISME
+  https://en.wikipedia.org/wiki/Shunting-yard_algorithm
+  
+	mentre hi hagi tokens per llegir
+		si es un numero, afegir-lo a la sortida
+		si es una funcio, afegir-lo a la pila
+		si es un operador,
+			mentre (al cim hi hagi un operador amb > precedencia)
+				treure de la pila i afegir-lo a la sortida
+			afegir-lo a la pila
+		si es "(", afegir-lo a la pila
+		si es ")", 
+			mentre al cim de la pila no hi hagi un "(",
+				treure de la pila i afegir-lo a la sortida
+	fi mentre
+	
+	buidar la pila a la sortida
+ */
+public class AvaluadorExprTest {
+
+	public static void main(String[] args) {
+		
+		AvaluadorExpr ae = new AvaluadorExprImpl();
+		
+		test(ae, "2 + 3 * 8");
+		test(ae, "( 2 + 3 ) * 8");
+
+
+		
+		// si tens temps
+
+		test(ae,"( 7 - 6.5 ) * 2.5");
+		test(ae,"(7-6.5)*2.5");
+	}
+	
+	public static void test(AvaluadorExpr ae, String expr) {
+
+		System.out.println("expression: " + expr);
+		List<String> tokens = ae.aTokens(expr);
+		List<String> pfList = ae.aPostfix(tokens);
+		System.out.println(pfList);
+		double result = ae.avalua(pfList);		
+		System.out.println("resultat: " + result + "\n");
+	}
+}

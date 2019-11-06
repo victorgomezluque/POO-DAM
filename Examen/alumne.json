@@ -1,0 +1,12 @@
+{
+	"nom":"marco",
+	"cognoms":"Frías Garcia",
+	"DNI":"39832329D",
+	"adreca":"Carrer Picanyol, 4, Sabadell",
+	"telefons":
+		[
+			98309293,
+			663243223
+		],
+	"mail":"marcofrias@gmail.com"
+}

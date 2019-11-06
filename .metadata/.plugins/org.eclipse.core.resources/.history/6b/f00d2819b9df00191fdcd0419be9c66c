@@ -1,0 +1,33 @@
+package problemes.figures.solucio;
+
+import java.awt.Color;
+import java.util.Set;
+import java.util.function.BiConsumer;
+import java.util.function.BinaryOperator;
+import java.util.function.Function;
+import java.util.function.Supplier;
+import java.util.stream.Collector;
+
+import problemes.figures.problema.Llenc;
+
+public abstract class FiguraColorImp extends FiguraImpl implements Color  {
+	
+	private Color color;
+
+	@Override
+	public Color getColor() {
+		return color;
+	}
+
+	@Override
+	public void setColor(Color color) {
+		this.color = color;
+	}
+	
+	public FiguraImpl FiguraColorImpl() {
+		
+	}
+	
+
+
+}

@@ -1,0 +1,9 @@
+
+
+public class User {
+	String UserName;
+	String password;
+	String alias;
+	date dataRegistre;
+	
+}
